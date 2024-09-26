@@ -7,6 +7,7 @@ import { FaAnglesRight } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Header } from "@/components/header/header";
+import { Link } from "react-router-dom";
 
 export function About() {
     useEffect(() => {
@@ -38,11 +39,11 @@ export function About() {
                                 </p>
                             </div>
                             <div className="flex gap-4 pt-4 md:pt-8 justify-between mb-8 md:mb-0">
-                                <button className="bg-purple-400 px-4 py-2 text-white rounded-md">Download CV</button>
+                                <Link to="https://drive.google.com/file/d/1CnroMsvwd18umxZPwlTbvl4Yptn8G2RN/view?usp=sharing" className="bg-purple-400 px-4 py-2 text-white rounded-md">Visualizar CV</Link>
                                 <ul className="text-white flex gap-4 items-center">
-                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="#"><FaGithub size={25} /></a></li>
-                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="#"><FaInstagram size={25} /></a></li>
-                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="#"><FaLinkedin size={25} /></a></li>
+                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="https://github.com/berdnaski"><FaGithub size={25} /></a></li>
+                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="https://www.instagram.com/dev.erickb/"><FaInstagram size={25} /></a></li>
+                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="https://www.linkedin.com/in/erick-berdnaski/"><FaLinkedin size={25} /></a></li>
                                 </ul>
                             </div>
                         </section>
