@@ -87,13 +87,13 @@ export function Contact() {
                             <h3 className="text-purple-400 font-semibold md:text-2xl text-xl">Redes Sociais:</h3>
                             <ul className={`flex text-zinc-100 space-x-4 p-4`}>
                                 <li className="transform transition-transform duration-200 hover:-translate-y-2">
-                                    <a href="https://github.com/berdnaski"><FaGithub size={25} /></a>
+                                    <a href="https://github.com/berdnaski" target="_blank"><FaGithub size={25} /></a>
                                 </li>
                                 <li className="transform transition-transform duration-200 hover:-translate-y-2">
-                                    <a href="https://www.instagram.com/dev.erickb/"><FaInstagram size={25} /></a>
+                                    <a href="https://www.instagram.com/dev.erickb/" target="_blank"><FaInstagram size={25} /></a>
                                 </li>
                                 <li className="transform transition-transform duration-200 hover:-translate-y-2">
-                                    <a href="https://www.linkedin.com/in/erick-berdnaski/"><FaLinkedin size={25} /></a>
+                                    <a href="https://www.linkedin.com/in/erick-berdnaski/" target="_blank"><FaLinkedin size={25} /></a>
                                 </li>
                             </ul>
                         </div>

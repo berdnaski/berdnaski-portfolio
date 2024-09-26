@@ -41,9 +41,9 @@ export function About() {
                             <div className="flex gap-4 pt-4 md:pt-8 justify-between mb-8 md:mb-0">
                                 <Link to="https://drive.google.com/file/d/1CnroMsvwd18umxZPwlTbvl4Yptn8G2RN/view?usp=sharing" className="bg-purple-400 px-4 py-2 text-white rounded-md">Visualizar CV</Link>
                                 <ul className="text-white flex gap-4 items-center">
-                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="https://github.com/berdnaski"><FaGithub size={25} /></a></li>
-                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="https://www.instagram.com/dev.erickb/"><FaInstagram size={25} /></a></li>
-                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="https://www.linkedin.com/in/erick-berdnaski/"><FaLinkedin size={25} /></a></li>
+                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="https://github.com/berdnaski" target="_blank"><FaGithub size={25} /></a></li>
+                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="https://www.instagram.com/dev.erickb/" target="_blank"><FaInstagram size={25} /></a></li>
+                                    <li className="transform transition-transform duration-200 hover:-translate-y-2"><a href="https://www.linkedin.com/in/erick-berdnaski/" target="_blank"><FaLinkedin size={25} /></a></li>
                                 </ul>
                             </div>
                         </section>
