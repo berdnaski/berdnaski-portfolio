@@ -1,6 +1,5 @@
 import CardServices from "@/components/card-services/card-services";
 import { Header } from "@/components/header/header";
-import { useState } from "react";
 import { FaLaptopCode, FaShoppingCart, FaLayerGroup, FaCogs, FaDesktop, FaLightbulb } from "react-icons/fa";
 
 const cardData = [
@@ -38,16 +37,10 @@ const cardData = [
 
 
 export function Services() {
-    const [isMenuVisible, setIsMenuVisible] = useState(false);
-
-    const handleMenuToggle = (isVisible: boolean) => {
-        setIsMenuVisible(isVisible);
-    };
-
     return (
         <div className="bg-black min-h-screen flex flex-col">
             <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-70">
-                <Header onMenuToggle={handleMenuToggle} />
+                <Header />
             </header>
 
             <div className="flex-grow">

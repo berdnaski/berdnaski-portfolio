@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import cryptoLogoImg from '../assets/crypto-logo.png';
 import eduardaLogoImg from '../assets/eduarda.png';
 import portfolioLogoImg from '../assets/portfolio.png'
@@ -29,7 +28,7 @@ const cardData = [
         title: 'DevLink',
         category: 'Tech',
         description: 'Projeto desenvolvido para fins de estudo, funciona como uma loja de carros, desde o cadastro, gerenciamento e contato do vendedor ao cliente. Tecnologias utilizadas.',
-        imgSrc: devlinkLogoImg, // Use a different image here for variety
+        imgSrc: devlinkLogoImg,
         technologies: [
             { name: 'Vercel', icon: <CgVercel size={18} className="transform transition-transform duration-200 hover:-translate-y-2" /> },
             { name: 'React', icon: <FaReact size={18} className="transform transition-transform duration-200 hover:-translate-y-2" /> },
@@ -89,16 +88,10 @@ const cardData = [
 ];
 
 export function Projects() {
-    const [isMenuVisible, setIsMenuVisible] = useState(false);
-
-    const handleMenuToggle = (isVisible: boolean) => {
-        setIsMenuVisible(isVisible);
-    };
-
     return (
         <div className="bg-black min-h-screen flex flex-col">
             <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-70">
-                <Header onMenuToggle={handleMenuToggle} />
+                <Header />
             </header>
 
                 <>

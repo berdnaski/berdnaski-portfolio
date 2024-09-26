@@ -8,8 +8,7 @@ import { Header } from "@/components/header/header";
 import emailjs from '@emailjs/browser';
 
 export function Contact() {
-    const [isMenuVisible, setIsMenuVisible] = useState(false);
-    const form = useRef<HTMLFormElement | null>(null); // Ref for the form
+    const form = useRef<HTMLFormElement | null>(null); 
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -21,10 +20,6 @@ export function Contact() {
         AOS.init({ duration: 1000 });
     }, []);
 
-    const handleMenuToggle = (isVisible: boolean) => {
-        setIsMenuVisible(isVisible);
-    };
-
     function sendEmail(e: React.FormEvent) {
         e.preventDefault();
 
@@ -34,15 +29,14 @@ export function Contact() {
         }
 
         emailjs.sendForm(
-            "service_j6ddtri", // Seu ID de serviço do emailjs
-            "template_j3bde7c", // Seu ID de template do emailjs
-            form.current!,      // Ref do formulário
-            "pVEvOUtUTzAwc9SAX" // Sua chave pública do emailjs
+            "service_j6ddtri", 
+            "template_j3bde7c",
+            form.current!,  
+            "pVEvOUtUTzAwc9SAX" 
         ).then((response) => {
             alert("Email enviado com sucesso!");
             console.log("EMAIL ENVIADO", response.status, response.text);
 
-            // Resetando os campos
             setName("");
             setEmail("");
             setWhatsapp("");
@@ -57,7 +51,7 @@ export function Contact() {
     return (
         <div className="bg-black min-h-screen flex flex-col">
             <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-70">
-                <Header onMenuToggle={handleMenuToggle} />
+                <Header />
             </header>
 
             <>
@@ -91,7 +85,7 @@ export function Contact() {
 
                         <div className="flex items-center mt-8">
                             <h3 className="text-purple-400 font-semibold md:text-2xl text-xl">Redes Sociais:</h3>
-                            <ul className={`flex text-zinc-100 space-x-4 p-4 ${isMenuVisible ? 'hidden' : ''}`}>
+                            <ul className={`flex text-zinc-100 space-x-4 p-4`}>
                                 <li className="transform transition-transform duration-200 hover:-translate-y-2">
                                     <a href="#"><FaGithub size={25} /></a>
                                 </li>
@@ -112,7 +106,7 @@ export function Contact() {
                                 <label className="text-sm">Nome</label>
                                 <input
                                     type="text"
-                                    name="from_name"  // Correspondente ao template
+                                    name="from_name"  
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     className="h-9 p-2 border-0 rounded-lg outline-none bg-zinc-800"

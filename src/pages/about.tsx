@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FaGithub, FaInstagram, FaJava, FaLinkedin } from "react-icons/fa";
 import logoImg from "../assets/about-img.png";
 import { SiCss3, SiHtml5, SiJavascript, SiLaravel, SiNodedotjs, SiReact, SiSpring } from "react-icons/si";
@@ -9,20 +9,14 @@ import "aos/dist/aos.css";
 import { Header } from "@/components/header/header";
 
 export function About() {
-    const [isMenuVisible, setIsMenuVisible] = useState(false);
-
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
 
-    const handleMenuToggle = (isVisible: boolean) => {
-        setIsMenuVisible(isVisible);
-    };
-
     return (
         <div className="bg-black min-h-screen flex flex-col">
             <header className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-70">
-                <Header onMenuToggle={handleMenuToggle} />
+                <Header />
             </header>
 
                 <>
