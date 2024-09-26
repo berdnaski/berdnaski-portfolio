@@ -1,11 +1,9 @@
-import { Button } from "@/components/ui/button"; // Você pode manter isso se quiser usar um botão estilizado
-import { Link } from "react-router-dom"; // Importa o Link para navegação
+import { Button } from "@/components/ui/button"; 
+import { Link } from "react-router-dom"; 
 import Eu from "../../assets/erick.jpeg";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -16,19 +14,18 @@ import { Cpu, House, MenuIcon, Presentation, User } from "lucide-react";
 import { useEffect } from "react";
 
 interface SidebarSheetProps {
-  onToggle?: (isVisible: boolean) => void; // Adiciona a prop onToggle
+  onToggle?: (isVisible: boolean) => void; 
 }
 
 export function SidebarSheet({ onToggle }: SidebarSheetProps) {
-  // Função para lidar com a abertura/fechamento do menu
   useEffect(() => {
     if (onToggle) {
-      onToggle(true); // Chama onToggle quando o menu for aberto
+      onToggle(true); 
     }
 
     return () => {
       if (onToggle) {
-        onToggle(false); // Chama onToggle quando o menu for fechado
+        onToggle(false);
       }
     };
   }, [onToggle]);
@@ -93,12 +90,6 @@ export function SidebarSheet({ onToggle }: SidebarSheetProps) {
             </Button>
           </Link>
         </div>
-
-        <SheetFooter>
-          <SheetClose asChild>
-            <Button type="submit">Meu CV</Button>
-          </SheetClose>
-        </SheetFooter>
       </SheetContent>
     </Sheet>
   );
